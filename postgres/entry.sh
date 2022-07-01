@@ -1,9 +1,5 @@
-sudo -E -u postgres /usr/lib/postgresql/14/bin/postgres >logfile 2>&1 &
-
 #write out current crontab
 # crontab -l > mycron
-
-
 echo "POSTGRES_USER=$POSTGRES_USER" >> /etc/environment
 echo "AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID" >> /etc/environment
 echo "AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY" >> /etc/environment
