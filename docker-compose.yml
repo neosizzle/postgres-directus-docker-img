@@ -21,7 +21,6 @@ services:
     volumes: 
       - db:/var/lib/postgresql/data
 
-  # todo configure this and custom db
   directus:
     image: directus/directus:latest
     depends_on:
@@ -29,8 +28,8 @@ services:
     container_name: postgres-autobackup-directus
     restart: always
     environment:
-      - KEY=255d861b-5ea1-5996-9aa3-922530ec40b1
-      - SECRET=6116487b-cda1-52c2-b5b5-c8022c45e263
+      - KEY=${DIRECTUS_KEY}
+      - SECRET=${DIRECTUS_SECRET}
       - DB_CLIENT=pg
       - DB_HOST=db
       - DB_PORT=5432
