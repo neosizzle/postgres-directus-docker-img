@@ -6,7 +6,7 @@ echo "AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY" >> /etc/environment
 echo "AWS_BUCKET_NAME=$AWS_BUCKET_NAME" >> /etc/environment
 echo "AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION" >> /etc/environment
 #echo new cron into cron file
-echo "* * * * * bash /backup.sh > /proc/1/fd/1 2>/proc/1/fd/2" >> mycron 
+echo "0 * * * * bash /backup.sh > /proc/1/fd/1 2>/proc/1/fd/2" >> mycron 
 
 #install new cron file
 crontab mycron
