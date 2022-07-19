@@ -38,8 +38,8 @@ services:
       - DB_PASSWORD=${POSTGRES_PASSWORD}
       - ADMIN_EMAIL=${DIRECTUS_EMAIL}
       - ADMIN_PASSWORD=${DIRECTUS_PW}
-      - CORS_ORIGIN="*"
-      - CORS_ENABLED="true"
+      - CORS_ORIGIN=${DIRECTUS_CORS_ORIGIN}
+      - CORS_ENABLED=true"
     ports:
         - "8055:8055"
     networks:
